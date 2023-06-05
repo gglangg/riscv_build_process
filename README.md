@@ -63,7 +63,11 @@ git clone https://github.com/llvm/llvm-project.git
 cd llvm-project
 mkdir build 
 cd build 
-cmake -G "Unix Makefiles" -DLLVM_TARGETS_TO_BUILD="RISCV"     -DLLVM_DEFAULT_TARGET_TRIPLE=riscv64-unknown-elf -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS="clang;lld" ../llvm
+cmake   -G "Unix Makefiles" \
+	-DLLVM_TARGETS_TO_BUILD="RISCV" \
+	-DLLVM_DEFAULT_TARGET_TRIPLE=riscv64-unknown-elf \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DLLVM_ENABLE_PROJECTS="clang;lld" ../llvm
 make -j32 
 make install 
 ``` 
