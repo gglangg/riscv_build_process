@@ -142,7 +142,8 @@ compile:
 ```
 
 ### run (use qemu simulator)
-``` bash
-cd qeum/build/bin
+``` shell
 ./qemu-riscv64 -cpu rv64,v=true,vlen=256,vext_spec=v1.0 -L ~/code/env/riscv-gnu-toolchain/ ~/code/rvv-intrinsic-doc/examples/a.out 
+#or
+spike --isa=rv64gcv ~/code/riscv-pk/build/pk a.out 
 ```
